@@ -1,0 +1,10 @@
+public class AverageSpeed {
+	public static void main(String[] args) {
+	double distance = 14;
+	double minutes = 45.5;
+	double time = minutes / 60;
+	double distanceMiles = distance * 1.6;
+	double averageSpeed = distanceMiles / time;
+	System.out.printf("Average speed is %f", averageSpeed);
+}
+}
