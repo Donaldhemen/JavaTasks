@@ -10,16 +10,16 @@
 // display sumPrimeFactorsResult
 
 public class SumPrimeFactors {
-    public static int sumPrimeFactor(int a){
+    public static int sumPrimeFactor(int number){
         int sum = 0;
-        for(int count = 2; count * count <= a; count++){
-            while(a % count == 0){
+        for(int count = 2; count * count <= number; count++){
+            while(number % count == 0){
                 sum += count;
                 a /= count;
             }
         } 
-         if (a > 1) {
-            sum += a;
+         if (number> 1) {
+            sum += number;
         }
         return sum;
     }

@@ -6,7 +6,7 @@
 public class TwinPrimes {
 	public static void main(String[] main) {
 	
-		for(int number = 1; number <= 1000; number++) {
+		for(int number = 2; number <= 1000; number++) {
 			if (number % 2 != 0 && number % 3 !=0  && number % 5 != 0){
 			System.out.printf("%d ", number);
 			}

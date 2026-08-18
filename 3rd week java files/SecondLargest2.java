@@ -25,8 +25,8 @@ public class SecondLargest1 {
             int number = input.nextInt();
 
             if (number > largestNumber) {
-               secondLargest = largestNumber;
-		largestNumber = number;
+                secondLargest = largestNumber;
+		        largestNumber = number;
             }
 
 	if (number > secondLargest && number < largestNumber) {
