@@ -1,6 +1,6 @@
 public class Account {
     private double balance;
-    private final int pin;
+    private int pin;
 
     public Account(int pin) {
 
