@@ -10,6 +10,7 @@ public class AccountTest {
 
     @BeforeEach
     public void resetBalance_toZero() {
+
         myAccount = new Account(1994);
     }
 
@@ -48,8 +49,13 @@ public class AccountTest {
     @Test
     public void cannotCheckBalance_withWrongPIN() {
         myAccount.deposit(5000);
-        assertEquals(-1, myAccount.checkBalance(1234));
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            myAccount.checkBalance(1234);
+        });
+
+        assertEquals("Invalid PIN", exception.getMessage());
     }
+
     @Test
     public void testThatICannot_withdrawWithWrongPIN() {
         myAccount.deposit(5000);

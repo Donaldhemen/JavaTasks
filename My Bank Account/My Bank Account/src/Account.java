@@ -1,6 +1,6 @@
 public class Account {
     private double balance;
-    private final int pin;
+    private int pin;
 
     public Account(int pin) {
 
@@ -11,7 +11,10 @@ public class Account {
         if(this.pin == pin) {
             return balance;
         }
-        return -1;
+        else{
+            throw new IllegalArgumentException("Invalid PIN");
+        }
+
     }
 
     public void deposit(double amount) {
